@@ -12,11 +12,12 @@ public class UserMenu extends JFrame {
 
     public UserMenu() {
         setTitle("Main Menu");
-        setSize(200, 300);
+        setSize(400, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         textArea = new JTextArea();
+        textArea.setFont(new Font("SansSerif", Font.BOLD, 14));
         add(new JScrollPane(textArea), BorderLayout.CENTER);
 
         JMenuBar menuBar = new JMenuBar();
@@ -44,6 +45,7 @@ public class UserMenu extends JFrame {
             try (FileWriter writer = new FileWriter("log.txt")) {
                 writer.write(textArea.getText());
                 JOptionPane.showMessageDialog(this, "Saved to log.txt");
+                textArea.append("Text saved to log.txt\n");
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
