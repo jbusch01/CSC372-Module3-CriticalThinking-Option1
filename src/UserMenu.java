@@ -22,7 +22,7 @@ public class UserMenu extends JFrame {
         JMenuBar menuBar = new JMenuBar();
         JMenu menu = new JMenu("Options");
 
-        JMenuItem menuItem1 = new JMenuItem("Show Date & time");
+        JMenuItem menuItem1 = new JMenuItem("Show Date & Time");
         JMenuItem menuItem2 = new JMenuItem("Save to Text File");
         JMenuItem menuItem3 = new JMenuItem("Random Shade of Green");
         JMenuItem menuItem4 = new JMenuItem("Exit Program");
@@ -58,7 +58,7 @@ public class UserMenu extends JFrame {
 
             getContentPane().setBackground(randomGreen);
             textArea.setBackground(randomGreen);
-            menuItem3.setText("Green Shade: RGB(" + red + "," + green + "," + blue + ")");
+            textArea.append("Green Shade: RGB(" + red + "," + green + "," + blue + ")\n");
         });
 
         menuItem4.addActionListener(e -> System.exit(0));
