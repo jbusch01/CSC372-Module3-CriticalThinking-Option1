@@ -12,7 +12,7 @@ public class UserMenu extends JFrame {
 
     public UserMenu() {
         setTitle("Main Menu");
-        setSize(200, 500);
+        setSize(200, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -55,7 +55,9 @@ public class UserMenu extends JFrame {
             int red = rand.nextInt(100);
             int blue = rand.nextInt(100);
             Color randomGreen = new Color(red, green, blue);
+
             getContentPane().setBackground(randomGreen);
+            textArea.setBackground(randomGreen);
             menuItem3.setText("Green Shade: RGB(" + red + "," + green + "," + blue + ")");
         });
 
